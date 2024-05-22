@@ -1,102 +1,129 @@
-import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Image, Platform } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image,  } from 'react-native';
 
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-
-export default function TabTwoScreen() {
+export default function Courses() {
+  const handlePress = () => {
+    // Handle the button press here
+    alert('');
+  };
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText> library
-          to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+    <View style={styles.container}>
+        <View>
+            <Text style={styles.header}>Khoá học</Text>
+        </View>
+      <Text style={styles.headerleft}>Đang học</Text>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.section}>
+          <TouchableOpacity onPress={handlePress} style={styles.sectionButton}>
+            <Text style={styles.sectionButtonText}>Khóa đã đăng ký</Text>
+          </TouchableOpacity>
+          <Text style={styles.header1}>Tất cả khoá học</Text>
+          <View style={styles.course}>
+            <Image source={{ uri: 'https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/385321475_3483756405178502_2999170051770681957_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEFPyErFwdgNQoD6eoJBuZyJjCZ3XB27QomMJndcHbtCoCBuqG_kKsf_9w7_1asdjVq4BU_T1Kq0iVo766_5GgK&_nc_ohc=t_gBz7fGmYwQ7kNvgFABTtt&_nc_ht=scontent.fhan17-1.fna&oh=00_AYAMrLQQJW7s5m2ZsFKmbd88D-mrzOz-uxWGK6ySukk_eg&oe=6650BB18' }} style={styles.courseImage} />
+          <View style={styles.courseInfo}>
+            <View style={styles.coursebackground} >
+              <TouchableOpacity>
+                <Text style={styles.courseTitle}>StarBrown (offline)</Text>
+                <Text style={styles.courseDetails}>22/05 - 27/05 : 5 buổi</Text>
+                <Text style={styles.courseInstructor}>Grand Master: Saoly</Text>
+                <Text style={styles.coursePrice}>100.000.000 đ</Text>
+              </TouchableOpacity> 
+            </View>
+          </View>
+        </View>
+          <View style={styles.course}>
+            <Image source={{ uri: 'https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/313399256_3249076735313138_8584330859742133610_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFHRB9sfVs9nBQH_b7tLodG4lhO0ziJ9HfiWE7TOIn0d6NJ4MoLRO8lGqyeeAFyT0pFzGUmjiIcw4WJDp8ZudK8&_nc_ohc=vLnufgWcCPIQ7kNvgGSF_1Q&_nc_ht=scontent.fhan17-1.fna&oh=00_AYDEJ4TmJC_rwZMavQ3skiLkSZypeLn6D10A79zYg6cLHw&oe=665097C6' }} style={styles.courseImage} />
+            <View style={styles.courseInfo}>
+            <View style={styles.coursebackground}>
+              <TouchableOpacity>
+              <Text style={styles.courseTitle}>L-Strokes</Text>
+                <Text style={styles.courseDetails}>22/05 - 27/05 : 5 buổi</Text>
+                <Text style={styles.courseInstructor}>Grand Master: Saoly</Text>
+                <Text style={styles.coursePrice}>100.000.000 đ</Text>
+              </TouchableOpacity>
+              </View>
+            </View>
+        </View>
+          {/* Repeat for other courses */}
+        </View>
+      </ScrollView>
+    </View>
   );
 }
-
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: 40,
   },
-  titleContainer: {
+ 
+  header: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  headerleft: {
+    fontSize: 20,
+    paddingLeft: 9,
+  },
+  header1: {
+    fontSize: 20,
+    padding: 1,
+  },
+  scrollView: {
+    backgroundColor: '#fff',
+  },
+  section: {
+    margin: 10,
+  },
+  sectionButton: {
+    backgroundColor: '#FDEFDD',
+    padding: 30,
+    marginBottom: 10,
+  },
+  sectionButtonText: {
+    fontSize: 18,
+    textAlign: 'center',
+  },
+  course: {
     flexDirection: 'row',
-    gap: 8,
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+    alignItems: 'center',
   },
+  courseInfo: {
+    marginLeft: 10,
+  },
+  courseTitle: {
+    fontSize: 16,
+  },
+  courseDetails: {
+    fontSize: 14,
+    color: '#000',
+  },
+  courseInstructor: {
+    fontSize: 14,
+    color: '#000',
+  },
+  coursePrice: {
+    fontSize: 16,
+
+    paddingVertical: 10,
+    color: '#000',
+  },
+  courseImage:{
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 30,
+  },
+  coursebackground: {
+    backgroundColor: '#FDEFDD',
+    padding: 10,
+    width: 305,
+    height: 100,
+  }
+  
 });
