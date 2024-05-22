@@ -8,6 +8,10 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Profile() {
     const [selectedOptions, setSelectedOptions] = useState({
+        privacy: false,
+        security: false,
+        language: false,
+        theme: false,
         contactInfo: false,
         accessLocation: false,
         accessContacts: false,
