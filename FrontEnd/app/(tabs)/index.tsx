@@ -1,70 +1,155 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import React from 'react';
+import { Image, StyleSheet, TouchableOpacity, View,Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+<View style={styles.container}>
+  <View style={styles.profileContainer}>
+    <Image
+      source={require('../../assets/images/avatarHung.jpg')}
+      style={styles.profileImage}
+    />
+    <View style={styles.cameraContainer}>
+      <TouchableOpacity style={styles.cameraIcon}>
+        <Ionicons name="camera" size={24} color="white" />
+      </TouchableOpacity>
+    </View>
+    <View style={styles.profileInfo}>
+      <ThemedText style={styles.nameInf} type="default">Name</ThemedText>
+      <ThemedText type="default">Rank</ThemedText>
+      <View style={styles.userInfo}>
+        <ThemedText type="default">0987777777</ThemedText>
+      </View>
+    </View>
+    <View style={styles.headerIcons}>
+      <TouchableOpacity style={styles.ticketButton}>
+        <MaterialCommunityIcons name="ticket-confirmation-outline" size={24} color="black" />
+        <Text style={styles.iconText}>12</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.iconButton}>
+        <MaterialIcons name="notifications-none" size={34} color="black" />
+        <View style={styles.notificationBadge}>
+          <Text style={styles.notificationText}>20</Text>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View style={styles.cornerRadius} />
+  </View>
+</View>
+
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    paddingHorizontal: 0,
+    paddingTop: 30,
+    backgroundColor: '#ffffff',
+  },
+  profileContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    marginBottom: 16,
+    backgroundColor: '#FDEFDD',
+    borderRadius: 2,
+    overflow: 'hidden',
+    position: 'relative',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
+  cameraContainer: {
     position: 'absolute',
+    top: 65,
+    left: 60,
+    transform: [{ translateX: -12 }, { translateY: -12 }], // Half of the camera icon size
+    backgroundColor: 'rgba(0,0,0,0.5)', // Transparent black for the overlay effect
+    borderRadius: 999, // Large enough value to create a circle
+    zIndex: 1, // Ensure camera icon appears above profile image
   },
+  cameraIcon: {
+    padding: 8,
+  },
+  profileImage: {
+    height: 120,
+    width: 120,
+    borderRadius: 60,
+    marginRight: 16,
+    marginTop:10,
+    marginBottom:10,
+    marginLeft:10,
+  },
+  profileInfo: {
+    flex: 1,
+    justifyContent: 'space-between', // Align items evenly
+  },
+  nameInf:{
+    fontWeight: 'bold',
+    fontSize:22,
+  },
+  iconsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  iconFrame: {
+    borderWidth: 1,
+    borderColor: 'black',
+    borderRadius: 12,
+    padding: 8,
+    marginLeft: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  pointsWrapper: {
+    backgroundColor: '#FDEFDD',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    marginTop: 16,
+    borderRadius: 16,
+  },
+  pointsContainer: {
+    alignItems: 'center',
+  },
+  headerIcons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+},
+ticketButton: {
+    marginLeft: 20,
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE',
+    borderRadius: 40,
+    paddingHorizontal: 15,
+    paddingVertical: 5,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+    flexDirection: 'row', // Add this line to align text and icon horizontally
+},
+iconButton: {
+    marginLeft: 10,
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE',
+    borderRadius: 40,
+    marginRight:10,
+},
+iconText: {
+    fontSize: 12,
+    color: 'black',
+    marginLeft: 5, // Add some space between the icon and the text
+    fontWeight:'bold'
+},
+notificationBadge: {
+    position: 'absolute',
+    top: -5,
+    right: -10,
+    backgroundColor: 'red',
+    borderRadius: 10,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+},
+notificationText: {
+    color: 'white',
+    fontSize: 10,
+},
 });
