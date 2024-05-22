@@ -168,8 +168,8 @@ const styles = StyleSheet.create({
         }),
     },
     title: {
-        paddingTop: 270,
-        paddingBottom: 20,
+        paddingTop: 200,
+        paddingBottom: 80,
         fontSize: 24,
     },
     codeContainer: {
