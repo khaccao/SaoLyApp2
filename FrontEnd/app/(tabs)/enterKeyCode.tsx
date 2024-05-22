@@ -3,7 +3,7 @@ import { StyleSheet, Platform, View, Text, KeyboardAvoidingView, TextInput, Touc
 import { useFonts } from 'expo-font';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function CreateKeyCode() {
+export default function EnterKeyCode() {
     const [fontsLoaded] = useFonts({
         'Montserrat-Bold': require('../../assets/fonts/Montserrat/Montserrat-Bold.ttf'),
     });
@@ -72,7 +72,7 @@ export default function CreateKeyCode() {
                 />
 
                 {/* Title */}
-                <Text style={[styles.title, { fontWeight: 'bold' }]}>Tạo mã khoá</Text>
+                <Text style={[styles.title, { fontWeight: 'bold' }]}>Nhập mã khoá</Text>
 
                 {/* Code input */}
                 <View style={styles.codeContainer}>
