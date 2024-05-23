@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import Swiper from 'react-native-swiper';
-<<<<<<< HEAD
 
 const App = () => {
   const blocks = [
@@ -32,36 +31,6 @@ const App = () => {
     // Thêm các block khác nếu cần
   ];
 
-=======
-const App = () => {
-  const blocks = [
-    { id: 1, name: 'Thiết kế chân mày, môi phong thủy', image: require('../../assets/images/dichvu1.jpg') },
-    { id: 2, name: 'Phum xăm môi', image: require('../../assets/images/dichvu2.jpg') },
-    { id: 3, name: 'Laser sửa chân mày', image: require('../../assets/images/dichvu3.jpg') },
-    { id: 4, name: 'Máy Đục Thần Thánh', image: require('../../assets/images/dichvu2.jpg') },
-    { id: 5, name: 'Block 5', image: require('../../assets/images/dichvu1.jpg') },
-    { id: 6, name: 'Block 6', image: require('../../assets/images/slide3.jpg') },
-    { id: 7, name: 'Block 7', image: require('../../assets/images/slide2.jpg') },
-    { id: 8, name: 'Block 8', image: require('../../assets/images/slide1.jpg') },
-  ];
-  const blocks2 = [
-    { id: 9, name: 'SOFT LINER', image: require('../../assets/images/muc1.jpg') },
-    { id: 10, name: 'NANO Ombre', image: require('../../assets/images/muc2.jpg') },
-    { id: 11, name: 'MASTER', image: require('../../assets/images/muc2.jpg') },
-    { id: 12, name: 'PROMAX', image: require('../../assets/images/muc1.jpg') },
-    { id: 13, name: 'PROMAX', image: require('../../assets/images/muc2.jpg') },
-    // Thêm các block khác nếu cần
-  ];
-  const blocks3 = [
-    { id: 14, name: 'Máy Xăm Hình', image: require('../../assets/images/mucdimoi.jpg') },
-    { id: 15, name: 'Máy Phun Xăm', image: require('../../assets/images/muc2.jpg') },
-    { id: 16, name: 'Máy Phun Xăm', image: require('../../assets/images/mucdimoi.jpg') },
-    { id: 17, name: 'Máy Phun Xăm', image: require('../../assets/images/muc1.jpg') },
-    { id: 18, name: 'Máy Phun Xăm', image: require('../../assets/images/mucdimoi.jpg') },
-    // Thêm các block khác nếu cần
-  ];
-
->>>>>>> KhacCao
   return (
     <ScrollView style={styles.container}>
       <View style={styles.section1}>
@@ -106,7 +75,6 @@ const App = () => {
       <View style={styles.slideContainer}>
         <Swiper style={styles.wrapper} dotStyle={styles.dot} activeDotStyle={[styles.dot, styles.activeDot]}>
           <View style={styles.slide}>
-<<<<<<< HEAD
             <Image source={require('../../assets/images/slide1.jpg')} style={styles.slideImage} />
           </View>
           <View style={styles.slide}>
@@ -120,21 +88,6 @@ const App = () => {
           </View>
           <View style={styles.slide}>
             <Image source={require('../../assets/images/slide1.jpg')} style={styles.slideImage} />
-=======
-            <Image source={require('../../assets/images/slidehome4.jpg')} style={styles.slideImage} />
-          </View>
-          <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome1.jpg')} style={styles.slideImage} />
-          </View>
-          <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome3.jpg')} style={styles.slideImage} />
-          </View>
-          <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome2.jpg')} style={styles.slideImage} />
-          </View>
-          <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome5.jpg')} style={styles.slideImage} />
->>>>>>> KhacCao
           </View>
         </Swiper>
       </View>
@@ -146,22 +99,7 @@ const App = () => {
       <View style={styles.section3}>
         <View style={styles.titleContainer}>
           <View style={styles.rectangle} />
-<<<<<<< HEAD
           <Text style={styles.sectionTitle}>Máy Phun Xăm</Text>
-        </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {blocks.map(block => (
-            <View key={block.id} style={styles.block}>
-              <Image source={block.image} style={styles.blockImage} />
-              <Text style={styles.blockName}>{block.name}</Text>
-              <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-                <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-              </TouchableOpacity>
-            </View>
-          ))}
-        </ScrollView>
-=======
-          <Text style={styles.sectionTitle}>Dịch Vụ Làm Đẹp</Text>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {blocks.map(block => (
@@ -176,7 +114,6 @@ const App = () => {
           </TouchableOpacity>
         ))}
       </ScrollView>
->>>>>>> KhacCao
       </View>
 
       {/* Divider */}
@@ -186,22 +123,7 @@ const App = () => {
 <View style={styles.section4}>
   <View style={styles.titleContainer}>
     <View style={styles.rectangle} />
-<<<<<<< HEAD
     <Text style={styles.sectionTitle}>Mực Collagen</Text>
-  </View>
-  <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-    {blocks2.map(block => (
-      <View key={block.id} style={styles.block}>
-        <Image source={block.image} style={styles.blockImage} />
-        <Text style={styles.blockName}>{block.name}</Text>
-        <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-          <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-        </TouchableOpacity>
-      </View>
-    ))}
-  </ScrollView>
-=======
-    <Text style={styles.sectionTitle}>Khóa Học</Text>
   </View>
   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {blocks2.map(block => (
@@ -216,7 +138,6 @@ const App = () => {
           </TouchableOpacity>
         ))}
       </ScrollView>
->>>>>>> KhacCao
 </View>
       {/* Divider */}
       <View style={styles.divider} />
@@ -224,23 +145,7 @@ const App = () => {
     <View style={styles.section5}>
       <View style={styles.titleContainer}>
         <View style={styles.rectangle} />
-<<<<<<< HEAD
         <Text style={styles.sectionTitle}>Mực Đi Sợi</Text>
-      </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {blocks3.map(block => (
-          <View key={block.id} style={styles.block}>
-            <Image source={block.image} style={styles.blockImage} />
-            <Text style={styles.blockName}>{block.name}</Text>
-            <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-              <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-            </TouchableOpacity>
-          </View>
-        ))}
-      </ScrollView>
-    </View>
-=======
-        <Text style={styles.sectionTitle}>Sản Phẩm</Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {blocks3.map(block => (
@@ -257,7 +162,6 @@ const App = () => {
       </ScrollView>
     </View>
     <View style={{ height: 50 }} />
->>>>>>> KhacCao
         </ScrollView>
       );
     };
@@ -446,10 +350,6 @@ const styles = StyleSheet.create({
     width: 150,
     marginRight: 10,
     alignItems: 'center',
-<<<<<<< HEAD
-=======
-    justifyContent: 'space-between', // Thêm vào đây
->>>>>>> KhacCao
     borderWidth: 1,
     borderColor: '#CCCCCC',
     borderRadius: 0,
@@ -471,20 +371,12 @@ const styles = StyleSheet.create({
   },
   blockName: {
     marginTop: 10,
-<<<<<<< HEAD
     fontSize: 14,
-=======
-    fontSize: 12,
->>>>>>> KhacCao
     fontWeight: 'bold',
     textAlign: 'center',
   },
   learnMore: {
-<<<<<<< HEAD
     marginTop: 5,
-=======
-    marginTop: 30,
->>>>>>> KhacCao
     color: 'black',
     textAlign: 'center',
   },
