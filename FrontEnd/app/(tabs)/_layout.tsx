@@ -70,7 +70,7 @@ export default function TabLayout() {
         }}
       />
             <Tabs.Screen
-        name="thietkechanmay"
+        name="test"
         options={{
           title: '', // ẩn tiêu đề
           tabBarIcon: ({ color, focused }) => (

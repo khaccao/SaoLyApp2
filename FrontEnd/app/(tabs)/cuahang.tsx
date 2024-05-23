@@ -102,16 +102,18 @@ const App = () => {
           <Text style={styles.sectionTitle}>Máy Phun Xăm</Text>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {blocks.map(block => (
-            <View key={block.id} style={styles.block}>
-              <Image source={block.image} style={styles.blockImage} />
-              <Text style={styles.blockName}>{block.name}</Text>
-              <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-                <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-              </TouchableOpacity>
-            </View>
-          ))}
-        </ScrollView>
+        {blocks.map(block => (
+          <TouchableOpacity 
+            key={block.id} 
+            style={styles.block} 
+            onPress={() => alert(`Learn More about ${block.name}`)}
+          >
+            <Image source={block.image} style={styles.blockImage} />
+            <Text style={styles.blockName}>{block.name}</Text>
+            <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
       </View>
 
       {/* Divider */}
@@ -124,16 +126,18 @@ const App = () => {
     <Text style={styles.sectionTitle}>Mực Collagen</Text>
   </View>
   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-    {blocks2.map(block => (
-      <View key={block.id} style={styles.block}>
-        <Image source={block.image} style={styles.blockImage} />
-        <Text style={styles.blockName}>{block.name}</Text>
-        <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-          <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-        </TouchableOpacity>
-      </View>
-    ))}
-  </ScrollView>
+        {blocks2.map(block => (
+          <TouchableOpacity 
+            key={block.id} 
+            style={styles.block} 
+            onPress={() => alert(`Learn More about ${block.name}`)}
+          >
+            <Image source={block.image} style={styles.blockImage} />
+            <Text style={styles.blockName}>{block.name}</Text>
+            <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
 </View>
       {/* Divider */}
       <View style={styles.divider} />
@@ -145,16 +149,19 @@ const App = () => {
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {blocks3.map(block => (
-          <View key={block.id} style={styles.block}>
+          <TouchableOpacity 
+            key={block.id} 
+            style={styles.block} 
+            onPress={() => alert(`Learn More about ${block.name}`)}
+          >
             <Image source={block.image} style={styles.blockImage} />
             <Text style={styles.blockName}>{block.name}</Text>
-            <TouchableOpacity onPress={() => alert(`Learn More about ${block.name}`)}>
-              <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-            </TouchableOpacity>
-          </View>
+            <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
+    <View style={{ height: 50 }} />
         </ScrollView>
       );
     };
