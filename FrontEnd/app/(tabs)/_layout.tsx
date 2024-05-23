@@ -23,10 +23,10 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} size={30}/>
           ),
-        }}
+        }} 
       />
       <Tabs.Screen
-        name="explore"
+        name="cuahang"
         options={{
           title: '', // ẩn tiêu đề
           tabBarIcon: ({ color, focused }) => (
@@ -68,6 +68,15 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'people' : 'people-outline'} color={color} size={30}/>
           ),
         }}
+      />
+            <Tabs.Screen
+        name="thietkechanmay"
+        options={{
+          title: '', // ẩn tiêu đề
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} size={30}/>
+          ),
+        }} 
       />
     </Tabs>
   );

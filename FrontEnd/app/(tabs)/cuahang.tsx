@@ -2,23 +2,24 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import Swiper from 'react-native-swiper';
+
 const App = () => {
   const blocks = [
-    { id: 1, name: 'Thiết kế chân mày, môi phong thủy', image: require('../../assets/images/dichvu1.jpg') },
-    { id: 2, name: 'Phum xăm môi', image: require('../../assets/images/dichvu2.jpg') },
-    { id: 3, name: 'Laser sửa chân mày', image: require('../../assets/images/dichvu3.jpg') },
-    { id: 4, name: 'Máy Đục Thần Thánh', image: require('../../assets/images/dichvu2.jpg') },
-    { id: 5, name: 'Block 5', image: require('../../assets/images/dichvu1.jpg') },
+    { id: 1, name: 'Máy Rung Thần Thánh', image: require('../../assets/images/maythanthanh2.jpg') },
+    { id: 2, name: 'Máy Cạo Thần Thánh', image: require('../../assets/images/avatarHung.jpg') },
+    { id: 3, name: 'Máy Sonic', image: require('../../assets/images/maythanthanh2.jpg') },
+    { id: 4, name: 'Máy Đục Thần Thánh', image: require('../../assets/images/slide2.jpg') },
+    { id: 5, name: 'Block 5', image: require('../../assets/images/slide1.jpg') },
     { id: 6, name: 'Block 6', image: require('../../assets/images/slide3.jpg') },
     { id: 7, name: 'Block 7', image: require('../../assets/images/slide2.jpg') },
     { id: 8, name: 'Block 8', image: require('../../assets/images/slide1.jpg') },
   ];
   const blocks2 = [
-    { id: 9, name: 'SOFT LINER', image: require('../../assets/images/muc1.jpg') },
-    { id: 10, name: 'NANO Ombre', image: require('../../assets/images/muc2.jpg') },
-    { id: 11, name: 'MASTER', image: require('../../assets/images/muc2.jpg') },
-    { id: 12, name: 'PROMAX', image: require('../../assets/images/muc1.jpg') },
-    { id: 13, name: 'PROMAX', image: require('../../assets/images/muc2.jpg') },
+    { id: 9, name: 'Máy Xăm Hình', image: require('../../assets/images/muc1.jpg') },
+    { id: 10, name: 'Máy Phun Xăm', image: require('../../assets/images/muc2.jpg') },
+    { id: 11, name: 'Máy Phun Xăm', image: require('../../assets/images/muc2.jpg') },
+    { id: 12, name: 'Máy Phun Xăm', image: require('../../assets/images/muc1.jpg') },
+    { id: 13, name: 'Máy Phun Xăm', image: require('../../assets/images/muc2.jpg') },
     // Thêm các block khác nếu cần
   ];
   const blocks3 = [
@@ -74,19 +75,19 @@ const App = () => {
       <View style={styles.slideContainer}>
         <Swiper style={styles.wrapper} dotStyle={styles.dot} activeDotStyle={[styles.dot, styles.activeDot]}>
           <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome4.jpg')} style={styles.slideImage} />
+            <Image source={require('../../assets/images/slide1.jpg')} style={styles.slideImage} />
           </View>
           <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome1.jpg')} style={styles.slideImage} />
+            <Image source={require('../../assets/images/avatarHung.jpg')} style={styles.slideImage} />
           </View>
           <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome3.jpg')} style={styles.slideImage} />
+            <Image source={require('../../assets/images/slide3.jpg')} style={styles.slideImage} />
           </View>
           <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome2.jpg')} style={styles.slideImage} />
+            <Image source={require('../../assets/images/slide2.jpg')} style={styles.slideImage} />
           </View>
           <View style={styles.slide}>
-            <Image source={require('../../assets/images/slidehome5.jpg')} style={styles.slideImage} />
+            <Image source={require('../../assets/images/slide1.jpg')} style={styles.slideImage} />
           </View>
         </Swiper>
       </View>
@@ -98,7 +99,7 @@ const App = () => {
       <View style={styles.section3}>
         <View style={styles.titleContainer}>
           <View style={styles.rectangle} />
-          <Text style={styles.sectionTitle}>Dịch Vụ Làm Đẹp</Text>
+          <Text style={styles.sectionTitle}>Máy Phun Xăm</Text>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {blocks.map(block => (
@@ -120,7 +121,7 @@ const App = () => {
 <View style={styles.section4}>
   <View style={styles.titleContainer}>
     <View style={styles.rectangle} />
-    <Text style={styles.sectionTitle}>Khóa Học</Text>
+    <Text style={styles.sectionTitle}>Mực Collagen</Text>
   </View>
   <ScrollView horizontal showsHorizontalScrollIndicator={false}>
     {blocks2.map(block => (
@@ -140,7 +141,7 @@ const App = () => {
     <View style={styles.section5}>
       <View style={styles.titleContainer}>
         <View style={styles.rectangle} />
-        <Text style={styles.sectionTitle}>Sản Phẩm</Text>
+        <Text style={styles.sectionTitle}>Mực Đi Sợi</Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {blocks3.map(block => (
@@ -342,7 +343,6 @@ const styles = StyleSheet.create({
     width: 150,
     marginRight: 10,
     alignItems: 'center',
-    justifyContent: 'space-between', // Thêm vào đây
     borderWidth: 1,
     borderColor: '#CCCCCC',
     borderRadius: 0,
@@ -364,12 +364,12 @@ const styles = StyleSheet.create({
   },
   blockName: {
     marginTop: 10,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   learnMore: {
-    marginTop: 30,
+    marginTop: 5,
     color: 'black',
     textAlign: 'center',
   },
