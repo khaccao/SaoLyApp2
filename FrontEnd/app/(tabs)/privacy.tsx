@@ -6,7 +6,7 @@ import { Feather } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Profile() {
+export default function Privacy() {
     const [selectedOptions, setSelectedOptions] = useState({
         privacy: false,
         security: false,

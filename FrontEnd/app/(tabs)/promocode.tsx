@@ -3,7 +3,7 @@ import { StyleSheet, Platform, View, Text, TouchableOpacity, Image, ScrollView }
 import { AntDesign, FontAwesome5, Foundation } from '@expo/vector-icons';
 
 
-export default function Profile() {
+export default function PromoCode() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>

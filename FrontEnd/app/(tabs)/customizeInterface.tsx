@@ -3,7 +3,7 @@ import { StyleSheet, Platform, View, Text, TouchableOpacity, ScrollView, Image }
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Profile() {
+export default function CustomizeInterface() {
     const [theme, setTheme] = useState('light');
 
     const toggleTheme = (selectedTheme) => {

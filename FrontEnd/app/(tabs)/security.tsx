@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
-export default function Profile() {
+export default function Security() {
     const [selectedOptions, setSelectedOptions] = useState({
         saveInfoLogin: false,
         accessLocation: false,
