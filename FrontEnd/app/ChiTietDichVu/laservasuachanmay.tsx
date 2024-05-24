@@ -26,9 +26,7 @@ export default function Profile() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <TouchableOpacity style={styles.iconButton}>
-                    <AntDesign name="left" size={20} color="#CFAE78" />
-                </TouchableOpacity>
+                 
                 <View style={styles.titleWrapper}>
                     <Text style={styles.headerText}>Laser và Sửa</Text>
                 </View>

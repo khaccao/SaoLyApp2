@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import Swiper from 'react-native-swiper';
+
+const { width, height } = Dimensions.get('window');
+
 const App = () => {
   const blocks = [
     { id: 1, name: 'Thiết kế chân mày, môi phong thủy', image: require('../../assets/images/dichvu1.jpg') },
@@ -19,7 +22,6 @@ const App = () => {
     { id: 11, name: 'MASTER', image: require('../../assets/images/muc2.jpg') },
     { id: 12, name: 'PROMAX', image: require('../../assets/images/muc1.jpg') },
     { id: 13, name: 'PROMAX', image: require('../../assets/images/muc2.jpg') },
-    // Thêm các block khác nếu cần
   ];
   const blocks3 = [
     { id: 14, name: 'Máy Xăm Hình', image: require('../../assets/images/mucdimoi.jpg') },
@@ -27,14 +29,12 @@ const App = () => {
     { id: 16, name: 'Máy Phun Xăm', image: require('../../assets/images/mucdimoi.jpg') },
     { id: 17, name: 'Máy Phun Xăm', image: require('../../assets/images/muc1.jpg') },
     { id: 18, name: 'Máy Phun Xăm', image: require('../../assets/images/mucdimoi.jpg') },
-    // Thêm các block khác nếu cần
   ];
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.section1}>
         <View style={styles.section1Content}>
-          {/* Left Part */}
           <View style={styles.leftPart}>
             <View style={styles.imageContainer}>
               <Image
@@ -49,7 +49,6 @@ const App = () => {
               <Text style={styles.phone}>Phone Number</Text>
             </View>
           </View>
-          {/* Right Part */}
           <View style={styles.rightPart}>
             <View style={styles.headerIcons}>
               <TouchableOpacity style={styles.ticketButton}>
@@ -70,7 +69,6 @@ const App = () => {
         </View>
       </View>
 
-      {/* Slide Section */}
       <View style={styles.slideContainer}>
         <Swiper style={styles.wrapper} dotStyle={styles.dot} activeDotStyle={[styles.dot, styles.activeDot]}>
           <View style={styles.slide}>
@@ -90,10 +88,8 @@ const App = () => {
           </View>
         </Swiper>
       </View>
-      {/* Divider */}
       <View style={styles.divider} />
 
-      {/* Section 3 */}
       <View style={styles.section3}>
         <View style={styles.titleContainer}>
           <View style={styles.rectangle} />
@@ -114,81 +110,69 @@ const App = () => {
       </ScrollView>
       </View>
 
-      {/* Divider */}
       <View style={styles.divider} />
 
-{/* Section 4 */}
-<View style={styles.section4}>
-  <View style={styles.titleContainer}>
-    <View style={styles.rectangle} />
-    <Text style={styles.sectionTitle}>Khóa Học</Text>
-  </View>
-  <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {blocks2.map(block => (
-          <TouchableOpacity 
-            key={block.id} 
-            style={styles.block} 
-            onPress={() => alert(`Learn More about ${block.name}`)}
-          >
-            <Image source={block.image} style={styles.blockImage} />
-            <Text style={styles.blockName}>{block.name}</Text>
-            <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
-</View>
-      {/* Divider */}
-      <View style={styles.divider} />
-    {/* Section 5 */}
-    <View style={styles.section5}>
-      <View style={styles.titleContainer}>
-        <View style={styles.rectangle} />
-        <Text style={styles.sectionTitle}>Sản Phẩm</Text>
-      </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {blocks3.map(block => (
-          <TouchableOpacity 
-            key={block.id} 
-            style={styles.block} 
-            onPress={() => alert(`Learn More about ${block.name}`)}
-          >
-            <Image source={block.image} style={styles.blockImage} />
-            <Text style={styles.blockName}>{block.name}</Text>
-            <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
-    </View>
-    <View style={{ height: 50 }} />
+      <View style={styles.section4}>
+        <View style={styles.titleContainer}>
+          <View style={styles.rectangle} />
+          <Text style={styles.sectionTitle}>Khóa Học</Text>
+        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {blocks2.map(block => (
+            <TouchableOpacity 
+              key={block.id} 
+              style={styles.block} 
+              onPress={() => alert(`Learn More about ${block.name}`)}
+            >
+              <Image source={block.image} style={styles.blockImage} />
+              <Text style={styles.blockName}>{block.name}</Text>
+              <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
+            </TouchableOpacity>
+          ))}
         </ScrollView>
-      );
-    };
+      </View>
+
+      <View style={styles.divider} />
+
+      <View style={styles.section5}>
+        <View style={styles.titleContainer}>
+          <View style={styles.rectangle} />
+          <Text style={styles.sectionTitle}>Sản Phẩm</Text>
+        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {blocks3.map(block => (
+            <TouchableOpacity 
+              key={block.id} 
+              style={styles.block} 
+              onPress={() => alert(`Learn More about ${block.name}`)}
+            >
+              <Image source={block.image} style={styles.blockImage} />
+              <Text style={styles.blockName}>{block.name}</Text>
+              <Text style={styles.learnMore}>Tìm hiểu thêm</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </View>
+      <View style={{ height: height * 0.1 }} />
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 30,
+    paddingTop: height * 0.05,
     backgroundColor: '#F7F7F7'
   },
   section1: {
     backgroundColor: '#FDEFDD',
-    marginBottom: 20,
-  },
-  shadow: {
-    position: 'absolute',
-    backgroundColor: '#000',
-    opacity: 0.25,
-    width: '100%',
-    height: 7, // Độ dài của bóng bạn có thể điều chỉnh tùy ý
-    bottom: 0,
-    left: 0,
-    zIndex: -1,
+    marginBottom: height * 0.02,
   },
   section1Content: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 10,
+    padding: height * 0.01,
   },
   leftPart: {
     flexDirection: 'row',
@@ -198,9 +182,9 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   image: {
-    width: 100,
-    height: 100,
-    borderRadius: 999,
+    width: width * 0.25,
+    height: width * 0.25,
+    borderRadius: width * 0.5,
   },
   cameraIcon: {
     position: 'absolute',
@@ -209,29 +193,26 @@ const styles = StyleSheet.create({
     transform: [{ translateX: -12 }, { translateY: -12 }],
   },
   info: {
-    marginLeft: 10,
+    marginLeft: width * 0.03,
   },
   name: {
     fontWeight: 'bold',
-    fontSize: 22,
+    fontSize: width * 0.055,
   },
   rank: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     color: 'black',
   },
   phone: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     color: 'black',
   },
   dot: {
     backgroundColor: 'lightgrey',
-    width: 5,
-    height: 5,
-    borderRadius: 4,
-    marginLeft: 3,
-    marginRight: 3,
-    marginTop: 3,
-    marginBottom: 3,
+    width: width * 0.0125,
+    height: width * 0.0125,
+    borderRadius: width * 0.01,
+    margin: width * 0.01,
   },
   activeDot: {
     backgroundColor: 'grey',
@@ -244,12 +225,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   ticketButton: {
-    marginLeft: 20,
+    marginLeft: width * 0.05,
     alignItems: 'center',
     backgroundColor: '#EEEEEE',
-    borderRadius: 40,
-    paddingHorizontal: 15,
-    paddingVertical: 5,
+    borderRadius: width * 0.1,
+    paddingHorizontal: width * 0.0375,
+    paddingVertical: height * 0.005,
     borderWidth: 1,
     borderColor: '#E0E0E0',
     flexDirection: 'row',
@@ -257,17 +238,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
   },
   iconButton: {
-    marginLeft: 10,
+    marginLeft: width * 0.025,
     backgroundColor: '#EEEEEE',
     alignItems: 'center',
-    borderRadius: 40,
+    borderRadius: width * 0.1,
     shadowRadius: 5,
     shadowOpacity: 0.5,
   },
   iconText: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     color: 'black',
-    marginLeft: 5,
+    marginLeft: width * 0.0125,
     fontWeight: 'bold',
   },
   notificationBadge: {
@@ -275,38 +256,38 @@ const styles = StyleSheet.create({
     top: -5,
     right: -10,
     backgroundColor: 'red',
-    borderRadius: 10,
-    paddingHorizontal: 5,
-    paddingVertical: 2,
+    borderRadius: width * 0.025,
+    paddingHorizontal: width * 0.0125,
+    paddingVertical: height * 0.0025,
   },
   notificationText: {
     color: 'white',
-    fontSize: 10,
+    fontSize: width * 0.025,
   },
   pointsContainer: {
-    height: 30,
-    width: 90,
-    marginTop: 10,
-    padding: 5,
+    height: height * 0.04,
+    width: width * 0.225,
+    marginTop: height * 0.0125,
+    padding: height * 0.00625,
     backgroundColor: '#CEC2B4',
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
+    borderTopLeftRadius: width * 0.025,
+    borderBottomLeftRadius: width * 0.025,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
-    marginLeft: 60,
+    marginLeft: width * 0.15,
     shadowRadius: 4,
     shadowOpacity: 0.5,
     textAlign: 'center',
   },
   points: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: 'black',
+    textAlign: 'center',
   },
   slideContainer: {
-    height: 150,
-    justifyContent:'flex-start',
-    marginLeft: 15,
-    marginRight: 15,
+    height: height * 0.2,
+    justifyContent: 'flex-start',
+    marginHorizontal: width * 0.0375,
   },
   wrapper: {},
   slide: {
@@ -317,77 +298,69 @@ const styles = StyleSheet.create({
   slideImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 20,
+    borderRadius: width * 0.05,
   },
   divider: {
     height: 1,
     backgroundColor: '#CCCCCC',
-    marginVertical: 20,
-    marginRight: 25,
-    marginLeft: 25,
+    marginVertical: height * 0.025,
+    marginHorizontal: width * 0.0625,
   },
   section3: {
-    paddingHorizontal: 10,
+    paddingHorizontal: width * 0.025,
   },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: height * 0.0125,
   },
   rectangle: {
-    width: 5,
-    height: 20,
+    width: width * 0.0125,
+    height: height * 0.025,
     backgroundColor: '#B19E5B',
-    marginRight: 10,
+    marginRight: width * 0.025,
   },
   sectionTitle: {
-    fontSize: 18,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
   },
   block: {
-    width: 150,
-    marginRight: 10,
+    width: width * 0.375,
+    marginRight: width * 0.025,
     alignItems: 'center',
-    justifyContent: 'space-between', // Thêm vào đây
+    justifyContent: 'space-between',
     borderWidth: 1,
     borderColor: '#CCCCCC',
-    borderRadius: 0,
-    padding: 0,
     backgroundColor: 'white',
-    // Bóng cho iOS
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    // Bóng cho Android
     elevation: 5,
   },
-  
   blockImage: {
-    width: 148,
-    height: 140,
-    borderRadius: 0,
+    width: '100%',
+    height: height * 0.18,
   },
   blockName: {
-    marginTop: 10,
-    fontSize: 12,
+    marginTop: height * 0.0125,
+    fontSize: width * 0.03,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   learnMore: {
-    marginTop: 30,
+    marginTop: height * 0.0375,
     color: 'black',
     textAlign: 'center',
   },
   section4: {
-    paddingHorizontal: 10,
-    paddingBottom: 20, // Added paddingBottom for scrollability
+    paddingHorizontal: width * 0.025,
+    paddingBottom: height * 0.025,
   },
   section5: {
-    paddingHorizontal: 10,
-    paddingBottom: 20, // Added paddingBottom for scrollability
+    paddingHorizontal: width * 0.025,
+    paddingBottom: height * 0.025,
   },
 });
 
 export default App;
-
