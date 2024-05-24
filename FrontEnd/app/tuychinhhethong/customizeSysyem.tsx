@@ -5,7 +5,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
-export default function Profile() {
+export default function CustomeziSystem() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>

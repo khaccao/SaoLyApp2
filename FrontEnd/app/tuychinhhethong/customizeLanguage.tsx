@@ -3,7 +3,7 @@ import { StyleSheet, Platform, View, Text, TouchableOpacity } from 'react-native
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; // Thêm import này
 
-export default function Profile() {
+export default function CustomizeLanguage() {
     const [selectedLanguage, setSelectedLanguage] = useState('vietnamese');
 
     const toggleLanguage = (language) => {
