@@ -17,7 +17,7 @@ export default function Introducewithfriend() {
     }
   };
   const handleBackPress = () => {
-    Alert.alert('');
+    Alert.alert('click');
   };
   return (
     <TouchableWithoutFeedback onPress={handleOutsidePress}>
