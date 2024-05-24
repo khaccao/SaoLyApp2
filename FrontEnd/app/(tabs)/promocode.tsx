@@ -50,9 +50,6 @@ export default function PromoCode() {
                     </View>
                 </View>
             </View>
-
-            
-
             <View style={styles.discountContainer}>
                 <View style={styles.discountCodeContainer}>
                     <Text style={styles.discountCodeText}>30%</Text>
