@@ -11,7 +11,7 @@ export default function CourseRegistration() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handlePress} style={styles.backButtonContainer}>
-        <AntDesign style={styles.backbutton} name="left" size={24} color="black" />
+        <AntDesign style={styles.backbutton} name="left" color="black" />
         </TouchableOpacity>
         <Text style={styles.header}>Khoá học đăng kí</Text>
       </View>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   backbutton: {
-    fontSize: 35,
+    fontSize: 25,
     color: '#CFAE78'
   },
   headerleft: {

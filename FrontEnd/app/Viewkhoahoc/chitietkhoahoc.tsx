@@ -10,7 +10,7 @@ export default function Detail() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handlePress} style={styles.backButtonContainer}>
-        <AntDesign style={styles.backbutton} name="left" size={24} color="black" />
+        <AntDesign style={styles.backbutton} name="left"color="black" />
         </TouchableOpacity>
         <Text style={styles.header}>Chi tiết khoá học</Text>
       </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   backbutton: {
-    fontSize: 35,
+    fontSize: 25,
     color: '#CFAE78',
   },
   scrollView: {

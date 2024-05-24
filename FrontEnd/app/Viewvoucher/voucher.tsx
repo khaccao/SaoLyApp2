@@ -11,7 +11,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handlePress} style={styles.backButtonContainer}>
-        <AntDesign style={styles.backbutton} name="left" size={24} color="black" />
+        <AntDesign style={styles.backbutton} name="left" color="black" />
         </TouchableOpacity>
         <Text style={styles.header}>Voucher</Text>
       </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   backbutton: {
-    fontSize: 30,
+    fontSize: 25,
     color: '#CFAE78',  // Adjust this color to match your design.
   },
   searchContainer: {
