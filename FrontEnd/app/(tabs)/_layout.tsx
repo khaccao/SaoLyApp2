@@ -69,15 +69,6 @@ export default function TabLayout() {
           ),
         }}
       />
-            <Tabs.Screen
-        name="test"
-        options={{
-          title: '', // ẩn tiêu đề
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} size={30}/>
-          ),
-        }} 
-      />
     </Tabs>
   );
 }
