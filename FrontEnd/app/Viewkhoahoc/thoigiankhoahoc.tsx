@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
+
 
 export default function Courseduration() {
   const handlePress = () => {
@@ -11,7 +13,7 @@ export default function Courseduration() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handlePress} style={styles.backButtonContainer}>
-          <Text style={styles.backbutton}>{'<'}</Text>
+        <AntDesign style={styles.backbutton} name="left" size={24} color="black" />
         </TouchableOpacity>
         <Text style={styles.header}>Thời gian khoá học</Text>
       </View>

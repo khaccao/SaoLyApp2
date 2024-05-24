@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Detail() {
   const handlePress = () => {
@@ -9,7 +10,7 @@ export default function Detail() {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handlePress} style={styles.backButtonContainer}>
-          <Text style={styles.backButton}>{'<'}</Text>
+        <AntDesign style={styles.backbutton} name="left" size={24} color="black" />
         </TouchableOpacity>
         <Text style={styles.header}>Chi tiết khoá học</Text>
       </View>
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 20,
   },
-  backButton: {
+  backbutton: {
     fontSize: 35,
     color: '#CFAE78',
   },
