@@ -138,7 +138,6 @@ const App = () => {
           </View>
         </Swiper>
       </View>
-
       {/* Divider */}
       <View style={styles.divider} />
 
