@@ -7,7 +7,7 @@ const App = () => {
   const blocks = [
     { id: 1, name: 'Máy Rung Thần Thánh', image: require('../../assets/images/maythanthanh2.jpg') },
     { id: 2, name: 'Máy Cạo Thần Thánh', image: require('../../assets/images/avatarHung.jpg') },
-    { id: 3, name: 'Máy Sonic', image: require('../../assets/images/maythanthanh2.jpg') },
+    { id: 3, name: 'Máy Sonic Thần Thánh', image: require('../../assets/images/maythanthanh2.jpg') },
     { id: 4, name: 'Máy Đục Thần Thánh', image: require('../../assets/images/slide2.jpg') },
     { id: 5, name: 'Block 5', image: require('../../assets/images/slide1.jpg') },
     { id: 6, name: 'Block 6', image: require('../../assets/images/slide3.jpg') },
