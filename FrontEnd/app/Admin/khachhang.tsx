@@ -46,7 +46,7 @@ const khachhangScreen = () => {
                     <View style={styles.userInfoContainer} key={index}>
                         <View style={styles.userInfoLeft}>
                             <Image
-                                source={require('../../assets/LogoSaoLy.png')}
+                                source={require('../../assets/images/avatarHung.jpg')}
                                 style={styles.userInfoAvatar}
                             />
                             <TouchableOpacity onPress={() => alert('Edit Profile')}>
