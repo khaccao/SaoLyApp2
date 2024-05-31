@@ -45,7 +45,7 @@ export default function TabLayout() {
             <View style={styles.qrButtonContainer}>
               <View style={styles.qrFrame}>
                 <Image
-                  source={require('../../assets/images/qr-code.png')}
+                  source={require('../../assets/images/date.png')}
                   style={styles.qrButton}
                   resizeMode="contain"
                 />
