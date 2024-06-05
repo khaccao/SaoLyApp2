@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function Detail() {
+const DetailKhoahoc = () => {
   const handlePress = () => {
     alert('Back button pressed');
   };
@@ -107,3 +107,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+export default DetailKhoahoc;

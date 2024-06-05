@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function CourseRegistration() {
+const CourseRegistration = () => {
   const handlePress = () => {
     // Handle the button press here
     alert('');
@@ -150,3 +150,4 @@ const styles = StyleSheet.create({
     height: 100,
   },
 });
+export default CourseRegistration;

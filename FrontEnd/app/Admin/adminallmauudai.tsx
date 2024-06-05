@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, TextInput, Image, Keyboard, T
 import { Ionicons } from '@expo/vector-icons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function App() {
+const AdmintatcaMauudai = () => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
@@ -194,3 +194,4 @@ const styles = StyleSheet.create({
     marginTop: 15
   },
 });
+export default AdmintatcaMauudai;
