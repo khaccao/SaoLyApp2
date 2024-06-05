@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FDEFDD',
     padding: 10,
     width: 305,
-    height: 100,
+    height: 101,
   }
   
 });
