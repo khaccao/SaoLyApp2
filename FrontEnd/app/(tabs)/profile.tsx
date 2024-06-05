@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image,  } from 'react-native';
-export default function Courses() {
+const Courses = () => {
   const handlePress = () => {
     // Handle the button press here
     alert('');
@@ -126,3 +126,4 @@ const styles = StyleSheet.create({
   }
   
 });
+export default Courses;

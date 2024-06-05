@@ -4,7 +4,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
-export default function Introducewithfriend() {
+const Introducewithfriend =() => {
   const [showBottomText, setShowBottomText] = useState(false);
 
   const handleInvitePress = () => {
@@ -178,3 +178,4 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 });
+export default Introducewithfriend;

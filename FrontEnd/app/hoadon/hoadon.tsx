@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image, Alert } fr
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Entypo from '@expo/vector-icons/Entypo';
 
-export default function InvoiceScreen() {
+const Bill = () => {
   const handleBackPress = () => {
     Alert.alert('');
   };
@@ -143,3 +143,4 @@ const styles = StyleSheet.create({
     marginRight: 3,
   },
 });
+export default Bill;

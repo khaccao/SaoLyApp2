@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image } from 'rea
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 
-export default function Courseduration() {
+const Courseduration =() => {
   const handlePress = () => {
     // Handle the button press here
     alert('Back button pressed');
@@ -99,4 +99,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
+export default Courseduration

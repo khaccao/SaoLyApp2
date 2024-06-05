@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Platform, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-const khachhangScreen = () => {
+const AdminKhoahoc = () => {
     return (
         <View style={styles.container}>
             {/* Header */}
@@ -293,4 +293,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default khachhangScreen;
+export default AdminKhoahoc;

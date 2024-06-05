@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, TextInput, Image, Keyboard, T
 import { Ionicons } from '@expo/vector-icons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function App() {
+const AdminCreate = ()=> {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
@@ -151,3 +151,4 @@ const styles = StyleSheet.create({
     color: '#CFAE78',
   },
 });
+export default AdminCreate

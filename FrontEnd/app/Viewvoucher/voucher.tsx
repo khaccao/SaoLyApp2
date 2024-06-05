@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity, Image, TextInput } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function App() {
+const Voucher = () => {
   const handlePress = () => {
     alert('Button pressed!');
   };
@@ -133,3 +133,4 @@ const styles = StyleSheet.create({
     color: '#000',  // Adjust this color to match your design.
   }
 });
+export default Voucher;

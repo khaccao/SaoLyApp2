@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function App() {
+const Voucher3 = () => {
   const handlePress = () => {
     alert('Button pressed!');
   };
@@ -119,3 +119,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+export default Voucher3;
